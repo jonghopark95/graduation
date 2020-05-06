@@ -1,0 +1,17 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graduation Project</title>
+  </head>
+  <body>
+    <h1>검색어 순위</h1>
+    <form action="/search" method="GET">
+      {% for item in items%}
+      <h2>{{item}}</h2>
+      <button type="submit" value="Submit">신문 기사 얻기</button>
+      <hr />
+      {% endfor %}
+    </form>
+  </body>
+</html>
