@@ -5,9 +5,11 @@ chosun = []
 donga = []
 joongang = []
 
-
+# 스크래핑을 위하여 사용자 권한을 부여한다.
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
+
+# 각 신문사별로 스크래핑하는 함수이다.
 
 
 def joongang_scrapper(search_term):
@@ -83,6 +85,8 @@ def donga_scrapper(search_term):
         news_box['content'] = news_content
         news_box['link'] = link
         donga.append(news_box)
+
+# 스크래핑 후 임시 저장소 db에 신문사별로 값을 넣어두었다.
 
 
 def portal_scrapper(search_term):
